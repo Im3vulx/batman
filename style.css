@@ -1,0 +1,12 @@
+.manette {
+    display: flex;
+}
+
+#tir, #deplacement{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin-top:10px;
+}
