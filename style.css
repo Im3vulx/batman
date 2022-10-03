@@ -1,12 +1,228 @@
-.manette {
-    display: flex;
-}
-
-#tir, #deplacement{
-    display: flex;
-    flex-direction: column;
+body{
+    background-color: #959595;
 }
 
 button{
     margin-top:10px;
+}
+
+/* agent */
+
+#agent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#agent img{
+    width: 20%;
+}
+
+/* button auto */
+
+.close{
+    display: none;
+}
+
+.auto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #F4D80C 25%,#515A5A );
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+/* Manette */
+
+.manette {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* joystick */
+
+#deplacement {
+    display: flex;
+}
+
+#triangle-code{
+    position: absolute;
+    top: 20px;
+    right: 75px;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-right : 50px solid transparent;
+    border-bottom : 50px solid #F4D80C;
+    border-left : 50px solid transparent;
+    cursor: pointer;
+}
+
+#triangle-code2{
+    position: absolute;
+    top: 75px;
+    left:20px;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 50px solid transparent;
+    border-right : 50px solid #F4D80C;
+    border-bottom : 50px solid transparent;
+    cursor: pointer;
+}
+
+#triangle-code3{
+    position: absolute;
+    top: 75px;
+    right:20px;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 50px solid transparent;
+    border-bottom : 50px solid transparent;
+    border-left : 50px solid #F4D80C;
+    cursor: pointer;
+}
+
+#triangle-code4{
+    position: absolute;
+    bottom: 20px;
+    right: 75px;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 50px solid #F4D80C;
+    border-right : 50px solid transparent;
+    border-left : 50px solid transparent;
+    cursor: pointer;
+}
+
+#cercle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 5px solid #F4D80C;
+}
+
+#cercle2 {
+    position: absolute;
+    top: 95px;
+    right: 95px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid #F4D80C;
+    background: #F4D80C;
+}
+
+/* button tir */
+
+#tir{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid #F4D80C; 
+    cursor: pointer; 
+}
+
+#tir svg {
+    transform: rotate(-25deg);
+    position:absolute;
+    top: 25px;
+    left: 25px;
+    fill: #F4D80C;
+    height: 100px;
+    width: 100px;
+}
+
+#vie svg{
+    position:absolute;
+    top: 15px;
+    left: 0;
+    fill: #F4D80C;
+    height: 75px;
+    width: 75px;
+}
+
+#auto2 #vie span{
+    background: #F4D80C;
+    padding: 5px 100px;
+}
+
+#auto2 svg#bat {
+    position:absolute;
+    top: 5px;
+    right: 15px;
+    fill: #F4D80C;
+    height: 100px;
+    width: 100px;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1000px){
+    body{
+        background-color: initial;
+    }
+    #auto2{
+        display: none;
+    }
+    #manette{
+        display: none;
+    }
+    #agent img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .button-64 {
+        font-size: 24px;
+        min-width: 196px;
+    }
+    #agent{
+        display: contents;
+    }
 }
